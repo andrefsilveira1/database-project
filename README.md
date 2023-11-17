@@ -14,4 +14,4 @@ Nesse repositório, estão todos os arquivos utilizados para a execução do pro
 
 ## Links:
 
-- Diagrama: https://dbdiagram.io/d/655743dc3be1495787320064
+- [Diagrama](https://dbdiagram.io/d/Banco-de-dados-655743dc3be1495787320064)
