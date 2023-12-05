@@ -2,7 +2,7 @@
 
 ## Arquivos:
 
-Nesse repositório, estão todos os arquivos utilizados para a execução do projeto. Foi subdividido em seções para facilitar a leitura das querys.
+Nesse repositório, estão todos os arquivos utilizados para a execução do projeto. Foi subdividido em seções para facilitar a leitura das queries.
 
 - root.sql: Contém apenas linhas de `CREATE`, comece por esse arquivo.
 - inserts.sql: Contém apenas linhas de `INSERT`.
