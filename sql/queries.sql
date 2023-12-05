@@ -112,6 +112,12 @@ SELECT *
 FROM Entrance
 LIMIT 3;
 
+SELECT id,
+       eventId,
+       member_id
+FROM EventMember
+LIMIT 5;
+
 -- Consulta Complexa:
 
 SELECT m.id,
