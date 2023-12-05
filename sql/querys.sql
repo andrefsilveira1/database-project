@@ -1,5 +1,5 @@
-INSERT INTO Event (name, date, place, members, created_at)
-VALUES ('Evento 1', '2023-11-17', 'Local 1', 'Palestrante 1', '2023-11-17 12:00:00');
+INSERT INTO Event (name, date, place_id, members, created_at)
+VALUES ('Evento 1', '2023-11-17', 1, 'Palestrante 1', '2023-11-17 12:00:00');
 
 INSERT INTO Member (name, born, created_at)
 VALUES ('Member1', '1990-01-01', '2023-11-17 12:01:00');
