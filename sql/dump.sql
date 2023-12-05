@@ -1,3 +1,5 @@
+-- Create statement:
+
 CREATE TABLE Event (
   id INTEGER PRIMARY KEY,
   name VARCHAR(250) unique not null,
@@ -108,7 +110,7 @@ VALUES (1, 1, 'Role1', 25.99, '2023-11-17 08:00:00'),
        (3, 5, 'Role14', 32.99, '2024-01-17 08:00:00'),
        (3, 6, 'Role15', 32.99, '2024-01-17 08:00:00'),
        (3, 8, 'Role16', 32.99, '2024-01-17 08:00:00');
-       
+
 -- Drop statement :
 
 
