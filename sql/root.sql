@@ -3,8 +3,9 @@ CREATE TABLE Event (
   name VARCHAR(250) unique not null,
   date TIMESTAMP not null,
   place_id INTEGER not null,
-  members VARCHAR,
+  event_member_id not null,
   FOREIGN KEY (place_id) REFERENCES Place(id),
+  FOREIGN KEY (event_member_id) REFERENCES EventMember(id),
   created_at TIMESTAMP
 );
 
