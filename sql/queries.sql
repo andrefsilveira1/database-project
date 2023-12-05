@@ -8,8 +8,9 @@ FROM Entrance;
 SELECT e.name AS 'event_name',
        p.name AS 'place_name',
        e.date AS 'event_date'
-FROM Event e JOIN
-     Place p
+FROM Event AS e 
+     JOIN
+     Place AS p
      ON (e.place_id = p.id);
 
 -- Consulta de Agregação:
@@ -18,43 +19,58 @@ SELECT SUM(price) AS 'event3_sum'
 FROM Entrance
 WHERE event_id = 3;
 
--- Consulta de Filtro:
+-- Consulta com Filtro:
 
 SELECT name AS 'member_name'
 FROM Member
 WHERE CAST(strftime('%Y', born) AS INTEGER) < 2000;
 
--- Consulta de Ordenação:
+-- Consulta com Ordenação:
 
 SELECT id, role, price
 FROM Entrance
 ORDER BY price DESC, role;
 
--- Consulta de Subconsulta:
+-- Consulta com Subconsulta:
 
 SELECT m.name AS 'member_name'
-FROM Member m
+FROM Member AS m
 WHERE m.id
 (SELECT em.member_id
-FROM EventMember em
+FROM EventMember AS em
 WHERE em.eventId = 1);
 
--- Consulta de União:
+-- Consulta com União:
 
 SELECT m.name AS 'member_name', m.born AS 'born_in'
-FROM Member m
+FROM Member AS m
 
 UNION
 
 SELECT p.name AS 'place_name'
-FROM Place p;
+FROM Place AS p;
 
--- Group Query:
+-- Consulta com Agroupamento:
 
--- Limit Query:
+SELECT event_id, SUM(price) AS 'sum'
+FROM Entrance
+GROUP BY event_id;
+
+-- Consulta com Limite:
 
 SELECT *
 FROM Entrance
 LIMIT 3;
 
--- Complex Query:
+-- Consulta Complexa:
+
+SELECT m.id, m.name, s.specialization
+FROM Member AS m
+     JOIN
+     EventMember AS em
+     ON (em.member_id = m.id)
+     JOIN
+     Speaker AS s
+     ON (s.event_member_id = em.id)
+ORDER BY m.id ASC
+LIMIT 2;
