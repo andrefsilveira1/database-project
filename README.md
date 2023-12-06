@@ -13,6 +13,8 @@ Nesse repositório, estão todos os arquivos utilizados para a execução do pro
 - database-model.pdf: PDF com ilustração visual do banco de dados.
 
 
-## Links:
+## Modelagem:
 
-- [Diagrama](https://dbdiagram.io/d/Banco-de-dados-655743dc3be1495787320064)
+- [Modelo Conceitual]
+- [Modelo Lógico]
+- [Modelo Físico](https://dbdiagram.io/d/ModeloFisicoBD-656fc85156d8064ca076021d)
