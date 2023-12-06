@@ -16,5 +16,5 @@ Nesse repositório, estão todos os arquivos utilizados para a execução do pro
 ## Modelagem:
 
 - [Modelo Conceitual]
-- [Modelo Lógico]
+- [Modelo Lógico](https://app.brmodeloweb.com/#!/logic/%7B%22modelid%22:%22656fcba0f52e3af2fee541c0%22,%22conversionId%22:%22%22%7D)
 - [Modelo Físico](https://dbdiagram.io/d/ModeloFisicoBD-656fc85156d8064ca076021d)
