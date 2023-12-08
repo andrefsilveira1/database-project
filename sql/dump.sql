@@ -5,8 +5,8 @@ CREATE TABLE Event (
   name VARCHAR(250) unique not null,
   date TIMESTAMP not null,
   place_id INTEGER not null,
-  FOREIGN KEY (place_id) REFERENCES Place(id),
-  created_at TIMESTAMP
+  created_at TIMESTAMP,
+  FOREIGN KEY (place_id) REFERENCES Place(id)
 );
 
 CREATE TABLE Member (
@@ -51,7 +51,7 @@ CREATE TABLE Entrance (
 
 -- Insert statement:
 
-INSERT INTO Event (name, date, place_id, event_member_id, created_at)
+INSERT INTO Event (name, date, place_id, created_at)
 VALUES ('Evento 1', '2023-11-17', 1, CURRENT_TIMESTAMP),
        ('Evento 2', '2023-12-17', 1, CURRENT_TIMESTAMP),
        ('Evento 3', '2024-01-17', 2, CURRENT_TIMESTAMP);
