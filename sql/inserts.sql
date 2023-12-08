@@ -1,4 +1,4 @@
-INSERT INTO Event (name, date, place_id, event_member_id, created_at)
+INSERT INTO Event (name, date, place_id, created_at)
 VALUES ('Evento 1', '2023-11-17', 1, CURRENT_TIMESTAMP),
        ('Evento 2', '2023-12-17', 1, CURRENT_TIMESTAMP),
        ('Evento 3', '2024-01-17', 2, CURRENT_TIMESTAMP);
