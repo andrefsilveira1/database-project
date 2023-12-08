@@ -3,8 +3,8 @@ CREATE TABLE Event (
   name VARCHAR(250) unique not null,
   date TIMESTAMP not null,
   place_id INTEGER not null,
-  FOREIGN KEY (place_id) REFERENCES Place(id),
-  created_at TIMESTAMP
+  created_at TIMESTAMP,
+  FOREIGN KEY (place_id) REFERENCES Place(id)
 );
 
 CREATE TABLE Member (
