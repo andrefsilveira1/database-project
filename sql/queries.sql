@@ -34,7 +34,7 @@ WHERE event_id = 3;
 
 SELECT COUNT(event_id) AS 'event2_amount'
 FROM Entrance
-WHERE price = 13.99
+WHERE price = 13.99;
 
 -- Consulta com Filtro:
 
@@ -54,7 +54,7 @@ SELECT id,
 FROM Entrance
 ORDER BY price DESC, role;
 
-SELECT name AS 'member_name'
+SELECT name AS 'member_name',
        strftime('%Y', born) AS 'birth_year'
 FROM Member
 ORDER BY CAST(strftime('%Y', born) AS INTEGER);
@@ -63,22 +63,23 @@ ORDER BY CAST(strftime('%Y', born) AS INTEGER);
 
 SELECT m.name AS 'event1_members'
 FROM Member AS m
-WHERE m.id
-(SELECT em.member_id
-FROM EventMember AS em
-WHERE em.eventId = 1);
+WHERE m.id IN (
+    SELECT em.member_id
+    FROM EventMember AS em
+    WHERE em.eventId = 1
+);
 
 SELECT e.name AS 'place1_events'
 FROM Event AS e
-WHERE e.place_id
-(SELECT p.id
-FROM Place AS p
-WHERE p.id = 1);
+WHERE e.place_id IN (
+    SELECT p.id
+    FROM Place AS p
+    WHERE p.id = 1
+);
 
 -- Consulta com União:
 
-SELECT m.name AS 'member_name',
-       m.born AS 'born_in'
+SELECT m.name AS 'member_name'
 FROM Member AS m
 
 UNION
@@ -101,10 +102,10 @@ SELECT event_id,
 FROM Entrance
 GROUP BY event_id;
 
-SELECT event_id,
+SELECT eventId,
        COUNT(member_id) AS 'members_amount'
 FROM EventMember
-GROUP BY event_id;
+GROUP BY eventId;
 
 -- Consulta com Limite:
 
